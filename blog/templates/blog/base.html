@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+    <title>Tom's test blog</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  </head>
+
+  <body class='bg-light'>
+    <div class='container'>
+      <div class='jumbotron'>
+        <h1 class='display-4'>Tom's test blog</h1>
+        <p class='lead'>Dit is een test blog</p>
+      </div>
+
+      {% block content %}
+      {% endblock %}
+
+    </div>
+  </body>
+</html>
