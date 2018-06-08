@@ -1,11 +1,27 @@
 <html>
   <head>
-    <title>Tom's blog</title>
-
+    <title>Tom's test blog</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   </head>
 
   <body>
+    <div class='container'>
+      <div class='jumbotron'>
+        <h1 class='display-4'>Tom's test blog</h1>
+        <p class='lead'>Dit is een test blog</p>
+      </div>
 
-
+      {% for post in posts %}
+      <div class='row'>
+        <p>published: {{ post.published_date }}</p>
+      </div>
+      <div class='row'>
+        <h1 class='display-4'><a href="">{{ post.title }}</a></h1>
+      </div>
+      <div class='row'>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
