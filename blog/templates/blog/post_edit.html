@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <h1 class='display-4'>New post</h1>
+
+  <form method="POST">{% csrf_token %}
+    <div class="form-group">
+      {{ form.as_p }}
+      {% if user.is_authenticated %}
+        <button type="submit" class="save btn btn-default">Save</button>
+      {% endif %}
+    </div>
+  </form>
+
+{% endblock %}

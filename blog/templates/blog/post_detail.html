@@ -12,5 +12,8 @@
     <div class='row'>
       <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    <div class='row'>
+      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
+    </div>
   {% endif %}
 {% endblock %}
